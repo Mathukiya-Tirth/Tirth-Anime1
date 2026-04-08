@@ -1,0 +1,13 @@
+// Reveal cards with staggered animation
+document.querySelectorAll('.card').forEach((card, index) => {
+  setTimeout(() => {
+    card.classList.add('show');
+  }, index * 300);
+});
+
+// Toggle flip on click
+document.querySelectorAll('.card').forEach(card => {
+  card.addEventListener('click', () => {
+    card.classList.toggle('flip');
+  });
+});
